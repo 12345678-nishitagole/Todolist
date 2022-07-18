@@ -17,7 +17,7 @@ app.set('view engine','ejs');
 
 
 // using mongoose:
-mongoose.connect("mongodb+srv://admin-nishita:BtcGtTYXAUXn.i4@atlascluster.0culu.mongodb.net/todolistDB",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://admin-nishita:BtcGtTYXAUXn.i4@atlascluster.0culu.mongodb.net/todolistDB");
 
 //create mongoose schema
 const itemsSchema = {
@@ -34,7 +34,7 @@ const item2 = new Item({
     name:"Hit the + button to add a new item."
 });
 const item3 = new Item({
-    name:"<-- Hit this to delete an item."
+    name:"Hit the checkbox to delete an item."
 });
 
 const defaultItems = [item1,item2,item3];
@@ -164,13 +164,13 @@ app.get("/:newPageName",function(req,res){
 //     res.redirect("/work");
 // });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-app.listen(port);
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 3000;
+// }
+// app.listen(port);
 
 
-app.listen(port,function(){
+app.listen(3000,function(){
     console.log("Server has Successfully");
 });

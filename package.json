@@ -17,5 +17,8 @@
     "express": "^4.17.3",
     "lodash": "^4.17.21",
     "mongoose": "^6.2.3"
+  },
+  "devDependencies": {
+    "ws": "3.3.2"
   }
 }
